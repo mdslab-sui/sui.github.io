@@ -1,40 +1,245 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隋的学术主页 | Sui's Homepage</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sui' Homepage</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --accent-color: #2b6cb0;
+            --text-color: #2d3748;
+            --muted-color: #718096;
+            --bg-color: #ffffff;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Header & Profile */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 36px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .profile-photo {
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #edf2f7;
+            border: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        .profile-info h1 {
+            margin: 0 0 6px 0;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        .profile-info .title {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 0 0 4px 0;
+        }
+        .profile-info .affiliation {
+            color: var(--muted-color);
+            margin: 0 0 14px 0;
+        }
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        /* Sections */
+        section {
+            margin-bottom: 36px;
+        }
+        h2 {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        /* News List */
+        .news-date {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: inline-block;
+            width: 85px;
+        }
+        /* Publications */
+        .pub-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .pub-item {
+            margin-bottom: 18px;
+        }
+        .pub-title {
+            font-weight: 600;
+            color: #1a202c;
+            display: block;
+        }
+        .pub-authors {
+            font-size: 0.95rem;
+            color: #4a5568;
+            display: block;
+        }
+        .pub-venue {
+            font-size: 0.92rem;
+            font-style: italic;
+            color: var(--muted-color);
+        }
+        .pub-links {
+            font-size: 0.88rem;
+            margin-left: 6px;
+        }
+        .pub-links a {
+            margin-right: 6px;
+        }
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--muted-color);
+            text-align: center;
+        }
+        /* Mobile Responsive */
+        @media (max-width: 640px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- 顶部导航栏 -->
-    <nav>
-        <a href="index.html">首页</a>
-        <a href="publications.html">学术发表</a>
-        <a href="teaching.html">教学经历</a>
-    </nav>
-
-    <!-- 个人核心信息区 -->
-    <header class="profile-container">
-        <img src="avatar.jpg" alt="张三的头像" class="avatar">
-        <div class="bio">
-            <h1>张三 (San Zhang)</h1>
-            <p><strong>职位：</strong> XXX大学 计算机系 博士后研究员</p>
-            <p><strong>研究方向：</strong> 人工智能、机器学习、数据挖掘</p>
-            <p><strong>联系邮箱：</strong> sanzhang@university.edu</p>
-            <p>
-                <a href="https://google.com" target="_blank">Google Scholar</a> | 
-                <a href="https://github.com" target="_blank">GitHub</a>
+    <!-- Header Section -->
+    <header class="profile-header">
+        <!-- Upload your photo named 'avatar.jpg' to the same GitHub folder -->
+        <img src="avatar.jpg" alt="Profile Photo" class="profile-photo">
+        <div class="profile-info">
+            <h1>FirstName LastName</h1>
+            <p class="title">Assistant Professor / Postdoctoral Researcher / Ph.D. Candidate</p>
+            <p class="affiliation">
+                Department of [Your Department]<br>
+                [University Name], [City, Country]<br>
+                Email: your.email [at] university.edu
             </p>
+            <div class="social-links">
+                <a href="cv.pdf" target="_blank">[CV]</a>
+                <a href="https://google.com" target="_blank">[Google Scholar]</a>
+                <a href="https://github.com" target="_blank">[GitHub]</a>
+                <a href="https://orcid.org" target="_blank">[ORCID]</a>
+                <a href="https://twitter.com" target="_blank">[X / Twitter]</a>
+            </div>
         </div>
     </header>
 
-    <!-- 个人简介 -->
-    <section>
-        <h2>关于我 (About Me)</h2>
-        <p>这里写你的个人简介。例如：我于202X年获得某某大学博士学位，目前主要从事关于XXXX的研究。我的研究成果曾发表在CVPR, ICCV等顶级会议上。</p>
+    <!-- Biography Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a [Your Title] in the Department of [Department Name] at [University Name], working with Prof. <a href="#">[Advisor Name]</a>. 
+            Prior to this, I received my Ph.D./M.S./B.S. degree from [Previous University] in [Year].
+        </p>
+        <p>
+            My research interests lie broadly in <strong>[Research Area 1]</strong>, <strong>[Research Area 2]</strong>, and <strong>[Research Area 3]</strong>. 
+            Specifically, I focus on developing scalable algorithms and theoretical frameworks for [Specific Research Problem].
+        </p>
     </section>
+
+    <!-- News Section -->
+    <section id="news">
+        <h2>News</h2>
+        <ul>
+            <li><span class="news-date">[Nov 2026]</span> One paper was accepted to <strong>[Conference/Journal Name 2026]</strong>!</li>
+            <li><span class="news-date">[Aug 2026]</span> Invited to serve as a Program Committee member / Reviewer for <strong>[Venue]</strong>.</li>
+            <li><span class="news-date">[May 2026]</span> Awarded the [Name of Grant / Fellowship / Best Paper Award].</li>
+        </ul>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <span class="pub-title">Paper Title One: A Novel Framework for Your Research Topic</span>
+                <span class="pub-authors"><strong>Your Name</strong>, Co-author One, Co-author Two</span>
+                <span class="pub-venue">Proceedings of the International Conference on [Topic] (CONF), 2026</span>
+                <span class="pub-links">
+                    <a href="#">[PDF]</a>
+                    <a href="#">[Code]</a>
+                    <a href="#">[BibTeX]</a>
+                </span>
+            </li>
+            <li class="pub-item">
+                <span class="pub-title">Paper Title Two: Theoretical Analysis of Something Important</span>
+                <span class="pub-authors">Co-author One, <strong>Your Name</strong>*, Corresponding Author (*Corresponding Author)</span>
+                <span class="pub-venue">IEEE Transactions on [Journal Name], Vol. 42, pp. 100-115, 2025</span>
+                <span class="pub-links">
+                    <a href="#">[PDF]</a>
+                    <a href="#">[Project Page]</a>
+                </span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Academic Service & Teaching -->
+    <section id="service">
+        <h2>Academic Service & Teaching</h2>
+        <ul>
+            <li><strong>Journal Reviewer:</strong> IEEE TPAMI, Nature Communications, [Journal Name]</li>
+            <li><strong>Conference Reviewer / PC:</strong> NeurIPS (2025, 2026), ICML (2026), CVPR (2026)</li>
+            <li><strong>Teaching Assistant:</strong> CS101 Introduction to [Subject], Fall 2025</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Ph.D. in [Your Major]</strong>, [University Name], 2021 – 2026</li>
+            <li><strong>B.S. in [Your Major]</strong>, [University Name], 2017 – 2021</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2026 FirstName LastName. Last updated: November 2026.</p>
+    </footer>
 
 </body>
 </html>
+
