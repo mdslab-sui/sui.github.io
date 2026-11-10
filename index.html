@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sui' Homepage</title>
+    <title>Jianbo Sui's Homepage</title>
     <style>
         :root {
             --primary-color: #1a365d;
@@ -20,7 +20,7 @@
             background-color: var(--bg-color);
             max-width: 880px;
             margin: 0 auto;
-            padding: 40px 24px;
+            padding: 20px 24px 40px 24px;
         }
         a {
             color: var(--accent-color);
@@ -29,6 +29,32 @@
         a:hover {
             text-decoration: underline;
         }
+        
+        /* Top Navigation Bar */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .nav-brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .nav-links {
+            display: flex;
+            gap: 18px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .nav-links a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
         /* Header & Profile */
         .profile-header {
             display: flex;
@@ -68,6 +94,7 @@
             font-size: 0.95rem;
             font-weight: 500;
         }
+
         /* Sections */
         section {
             margin-bottom: 36px;
@@ -86,13 +113,15 @@
         li {
             margin-bottom: 10px;
         }
+
         /* News List */
         .news-date {
             font-weight: 600;
             color: var(--primary-color);
             display: inline-block;
-            width: 85px;
+            width: 95px;
         }
+
         /* Publications */
         .pub-list {
             list-style: none;
@@ -123,6 +152,7 @@
         .pub-links a {
             margin-right: 6px;
         }
+
         /* Footer */
         footer {
             margin-top: 50px;
@@ -132,6 +162,7 @@
             color: var(--muted-color);
             text-align: center;
         }
+
         /* Mobile Responsive */
         @media (max-width: 640px) {
             .profile-header {
@@ -140,6 +171,10 @@
             }
             .social-links {
                 justify-content: center;
+            }
+            .top-nav {
+                flex-direction: column;
+                gap: 12px;
             }
         }
     </style>
@@ -153,29 +188,27 @@
             <a href="index.html" class="active">Home</a>
             <a href="#news">News</a>
             <a href="#publications">Publications</a>
-            <a href="#teaching">Teaching & Service</a>
+            <a href="#service">Teaching & Service</a>
             <a href="#education">Education</a>
         </div>
     </nav>
     
     <!-- Header Section -->
     <header class="profile-header">
-        <!-- Upload your photo named 'sui.png' to the same GitHub folder -->
-        <img src="suijb.png" alt="Profile Photo" class="profile-photo">
+        <img src="suijb.png" alt="Jianbo Sui Profile Photo" class="profile-photo">
         <div class="profile-info">
-            <h1>Jianbo Sui</h1>
+            <h1>Jianbo Sui (隋建波)</h1>
             <p class="title">Associate Professor</p>
             <p class="affiliation">
-                Department of Mechanical Engineering<br>
+                School of Electromechanical Engineering<br>
                 Guangdong University of Technology, Guangzhou, China<br>
                 Email: jsui@gdut.edu.cn
             </p>
             <div class="social-links">
                 <a href="cv.pdf" target="_blank">[CV]</a>
-                <a href="https://google.com" target="_blank">[Google Scholar]</a>
+                <a href="https://scholar.google.com/citations?user=MDa8N9kAAAAJ&hl=en&oi=ao" target="_blank">[Google Scholar]</a>
                 <a href="https://github.com" target="_blank">[GitHub]</a>
                 <a href="https://orcid.org" target="_blank">[ORCID]</a>
-                <a href="https://twitter.com" target="_blank">[X / Twitter]</a>
             </div>
         </div>
     </header>
@@ -184,12 +217,12 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            I am an Associate Professor in the Department of Mechanical Engineering at Guangdong University of Technology</a>. 
-            Prior to this, I received my Ph.D. degree from The University of Tokyo in 2014.
+            I am an Associate Professor in the School of Electromechanical Engineering at <a href="https://www.gdut.edu.cn/" target="_blank">Guangdong University of Technology</a>. 
+            I also serve as a key researcher at the Guangdong Key Laboratory of Minimally Invasive Surgical Instruments and Manufacturing Technology and co-builder of the State Key Laboratory of High Performance Tools.
         </p>
         <p>
-            My research interests lie broadly in <strong>[Research Area 1]</strong>, <strong>[Research Area 2]</strong>, and <strong>[Research Area 3]</strong>. 
-            Specifically, I focus on developing scalable algorithms and theoretical frameworks for [Specific Research Problem].
+            My research focuses broadly on <strong>intelligent minimally invasive surgical instruments</strong>, <strong>FBG/piezoelectric force-sensing mechanisms</strong>, and <strong>biological tissue-tool interaction mechanics</strong>. 
+            Specifically, I investigate micro-force feedback systems, femtosecond laser micro-textured surfaces for tissue damage reduction, cable-driven multi-DOF laparoscopic instruments, and orthopedic micro-motion fixators.
         </p>
     </section>
 
@@ -197,9 +230,9 @@
     <section id="news">
         <h2>News</h2>
         <ul>
-            <li><span class="news-date">[Nov 2026]</span> One paper was accepted to <strong>[Conference/Journal Name 2026]</strong>!</li>
-            <li><span class="news-date">[Aug 2026]</span> Invited to serve as a Program Committee member / Reviewer for <strong>[Venue]</strong>.</li>
-            <li><span class="news-date">[May 2026]</span> Awarded the [Name of Grant / Fellowship / Best Paper Award].</li>
+            <li><span class="news-date">[Oct 2026]</span> Awarded the 25th Guangdong Youth May Fourth Medal (Collective Award).</li>
+            <li><span class="news-date">[Aug 2026]</span> Research paper on FBG clamping force sensors accepted for publication.</li>
+            <li><span class="news-date">[Mar 2026]</span> Appointed as a Standing Committee Member of the Implantable Devices and Advanced Manufacturing Branch, Guangdong Society of Biomedical Engineering.</li>
         </ul>
     </section>
 
@@ -208,34 +241,52 @@
         <h2>Selected Publications</h2>
         <ul class="pub-list">
             <li class="pub-item">
-                <span class="pub-title">Paper Title One: A Novel Framework for Your Research Topic</span>
-                <span class="pub-authors"><strong>Your Name</strong>, Co-author One, Co-author Two</span>
-                <span class="pub-venue">Proceedings of the International Conference on [Topic] (CONF), 2026</span>
+                <span class="pub-title">Arch-Shaped FBG Clamping Force Sensor for Minimally Invasive Surgical Instruments</span>
+                <span class="pub-authors"><strong>Jianbo Sui</strong>, et al.</span>
+                <span class="pub-venue">Microsystems & Nanoengineering, 2026</span>
                 <span class="pub-links">
-                    <a href="#">[PDF]</a>
-                    <a href="#">[Code]</a>
+                    <a href="#">[Paper]</a>
                     <a href="#">[BibTeX]</a>
                 </span>
             </li>
             <li class="pub-item">
-                <span class="pub-title">Paper Title Two: Theoretical Analysis of Something Important</span>
-                <span class="pub-authors">Co-author One, <strong>Your Name</strong>*, Corresponding Author (*Corresponding Author)</span>
-                <span class="pub-venue">IEEE Transactions on [Journal Name], Vol. 42, pp. 100-115, 2025</span>
+                <span class="pub-title">Design and Biomechanical Characterization of Micro-Motion Fixators for Bone Fracture Healing</span>
+                <span class="pub-authors"><strong>Jianbo Sui</strong>, et al.</span>
+                <span class="pub-venue">IEEE Sensors Journal, 2025</span>
                 <span class="pub-links">
+                    <a href="#">[Paper]</a>
                     <a href="#">[PDF]</a>
-                    <a href="#">[Project Page]</a>
+                </span>
+            </li>
+            <li class="pub-item">
+                <span class="pub-title">Femtosecond Laser Micro-Texturing on Surgical Tool Interfaces for Stress Redistribution and Damage Reduction</span>
+                <span class="pub-authors"><strong>Jianbo Sui</strong>, et al.</span>
+                <span class="pub-venue">Bio-Medical Materials and Engineering, 2026</span>
+                <span class="pub-links">
+                    <a href="#">[Paper]</a>
+                </span>
+            </li>
+            <li class="pub-item">
+                <span class="pub-title">Experimental Study on Mechanical Characteristics of Tapping for Medical Bone Screws</span>
+                <span class="pub-authors"><strong>Jianbo Sui</strong>, et al.</span>
+                <span class="pub-venue">Medical Engineering & Physics, 2025</span>
+                <span class="pub-links">
+                    <a href="#">[Paper]</a>
                 </span>
             </li>
         </ul>
+        <p style="font-size: 0.95rem; margin-top: 12px;">
+            For a complete list of publications, please visit my <a href="https://scholar.google.com/citations?user=MDa8N9kAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar Profile</a>.
+        </p>
     </section>
 
     <!-- Academic Service & Teaching -->
     <section id="service">
         <h2>Academic Service & Teaching</h2>
         <ul>
-            <li><strong>Journal Reviewer:</strong> IEEE TPAMI, Nature Communications, [Journal Name]</li>
-            <li><strong>Conference Reviewer / PC:</strong> NeurIPS (2025, 2026), ICML (2026), CVPR (2026)</li>
-            <li><strong>Teaching Assistant:</strong> CS101 Introduction to [Subject], Fall 2025</li>
+            <li><strong>Society Memberships:</strong> Chinese Society of Biomedical Engineering (CSBME); Standing Committee Member, Guangdong Society of Biomedical Engineering (Implantable Devices & Advanced Manufacturing Branch).</li>
+            <li><strong>Journal Reviewer:</strong> IEEE Sensors Journal, Surgical Endoscopy, Annals of Biomedical Engineering, Medical Engineering & Physics.</li>
+            <li><strong>Teaching & Honors:</strong> Designated Master Teacher of Curriculum Ideological and Political Education (Ministry of Education, China); Instructor for Undergraduate Mechanical Engineering Graduation Projects.</li>
         </ul>
     </section>
 
@@ -243,15 +294,14 @@
     <section id="education">
         <h2>Education</h2>
         <ul>
-            <li><strong>Ph.D. in [Your Major]</strong>, [University Name], 2021 – 2026</li>
-            <li><strong>B.S. in [Your Major]</strong>, [University Name], 2017 – 2021</li>
+            <li><strong>Ph.D. in Mechanical / Biomedical Engineering</strong>, 2011 – 2016</li>
+            <li><strong>B.S. in Mechanical Engineering</strong>, 2007 – 2011</li>
         </ul>
     </section>
 
     <footer>
-        <p>© 2026 FirstName LastName. Last updated: November 2026.</p>
+        <p>© 2026 Jianbo Sui. Last updated: November 2026.</p>
     </footer>
 
 </body>
 </html>
-
